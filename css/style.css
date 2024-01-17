@@ -1,7 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
     box-sizing: border-box; /* */
 }
 
-body {
+:root {
+    --navy: #2A324B;
+    --lightnavy: #58699D;
+    --lightgray: #E1E5EE;
+    --white: #fff;
     
+    --font: 'Roboto', sans-serif;
+    --fontalt: 'Montserrat', sans-serif;
+
+}
+
+body {
+    background-color: var(--lightgray);
+    font-family: var(--font);
+
+}
+
+#container {
+    width: 80%;
+    min-height: 200px;
+    margin: 0 auto; 
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+nav {
+    width: 100%;
+
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    flex-wrap: wrap; /* Når hele vinduet blir mindre, så wrappes elementene ut på flere linjer */
+    /* Dette fikser at elementer oser ut av maxbredden satt "container", når det ikke er noe mer rom i elementet å skvise sammen */
+}
+
+nav li {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1; /* Utvider hele navigasjonen så hele bredden fylles med navigasjonen */
+
+}
+
+nav a {
+    flex-grow: 1; /* Hver meny utvider seg ut i den ledige plassen rundt */
+	display: inline-block;
+	background-color: var(--navy);
+	padding: 2.5rem;
+    text-align: center;
+	color: var(--white);
+	text-decoration: none;
+	font-size: 2.1rem;
+	font-weight: 900;
+}
+
+nav a:hover {
+    background-color: var(--yellow);
+    color: var(--black);
+    border-bottom: 4px solid var(--black);
+}
+
+main {
+    background-color: var(--white);
+}
+
+main article {
+    padding: 8rem;
+    /*padding-right: 21rem*/
+}
+
+main h2 {
+	font-size: 2.5rem;
+	font-weight: 700;
+	font-family: var(--fontalt);
+}
+
+main p {
+    font-family: var(--fontalt);
+    font-size: 1.7rem;
 }
