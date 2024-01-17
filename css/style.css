@@ -14,16 +14,25 @@
     --font: 'Roboto', sans-serif;
     --fontalt: 'Montserrat', sans-serif;
 
+    --rootsize: 20px;
+
 }
+
+/* Fixed text sizes */
+p { font-size: 1rem; }
+h2 { font-size: 1.5rem; font-weight: 700; }
+
 
 body {
     background-color: var(--lightgray);
     font-family: var(--font);
+    font-size: var(--rootsize);
 
 }
 
 #container {
-    width: 80%;
+    width: 100%;
+    max-width: 1200px;
     min-height: 200px;
     margin: 0 auto; 
     margin-top: 10%;
@@ -75,17 +84,14 @@ main {
 }
 
 main article {
-    padding: 8rem;
+    padding: 5rem;
     /*padding-right: 21rem*/
 }
 
 main h2 {
-	font-size: 2.5rem;
-	font-weight: 700;
 	font-family: var(--fontalt);
 }
 
 main p {
     font-family: var(--fontalt);
-    font-size: 1.7rem;
 }
