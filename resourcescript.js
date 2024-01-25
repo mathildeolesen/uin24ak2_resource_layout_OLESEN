@@ -6,6 +6,7 @@
     
     function updateArticle(resource) {
 
+        // Lager ny <li> element for hver source i resources.sources. ".join" legger dem til etter hverandre
         let sourcesList = resource.sources.map(source => `<li><a href="${source.url}">${source.title}</a></li>`).join('');
 
         resourceHTML = `<article>
@@ -19,7 +20,7 @@
     }
 
     function selectCategory(categoryId) {
-        const resource = resources.find(res => res.category.toLowerCase() === categoryId.toLowerCase());
+        const resource = resources.find(resource => resource.category.toLowerCase() === categoryId.toLowerCase());
         // .toLowerCase : Gjør om alt til små bokstaver så de kan sammenlignes. I ressurser er kategoriene med Store og små bokstaver, 
         // mens html class og id bruker små bokstaver (ifølge best practice).
         if (resource) {
